@@ -62,7 +62,7 @@ function getData(Cookie, ratio) {
     res.map((app, k) => {
       var cookie = App.isIOS(app.platform) ? Cookie.ios : Cookie.android;
       if (app.app_valuepotion_id !== null){
-        for (var i = 2; i< 31; i++){
+        for (var i = 1; i < 1 + utils.getEnv('SUB_DAY', 1); i++){
           day = utils.subDate(i);
           AdRevenue.service(app, day, day, cookie, ratio, function (error, results) {
             if (error) throw error;
