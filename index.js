@@ -39,10 +39,11 @@ Sys.findByKey(utils.getEnv('KEY_COOKIE_IOS'), function (err, res) {
 
 
 var rule = new schedule.RecurrenceRule();
-rule.minute = 20;
-rule.hour = 3;
+rule.hour = utils.getEnv('SCHEDULE_HOUR');
+rule.minute = utils.getEnv('SCHEDULE_MINUTE');
 
 var j = schedule.scheduleJob(rule, function(){
+  console.log(`<<<<<<<<<<<<<< Start Job at ${moment().format('YYYY-MM-DD HH:MM:ss')} >>>>>>>>>>>>>>>>>>>>>`);
   initJob();
 });
 
