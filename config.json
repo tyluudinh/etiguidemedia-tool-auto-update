@@ -1,0 +1,10 @@
+{
+  "DB": {
+    "HOST": "commonjs",
+    "DB_NAME": "es5",
+    "DB_US": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
