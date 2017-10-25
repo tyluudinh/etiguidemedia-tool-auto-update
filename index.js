@@ -39,7 +39,7 @@ Sys.findByKey(utils.getEnv('KEY_COOKIE_IOS'), function (err, res) {
 
 
 var rule = new schedule.RecurrenceRule();
-rule.minute = 10;
+rule.minute = 20;
 rule.hour = 3;
 
 var j = schedule.scheduleJob(rule, function(){
